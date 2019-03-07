@@ -1,5 +1,6 @@
 set -euxo pipefail
 
-echo "PASS"
+echo "Running 'go run'"
+go run goprogram.go
 exit 0
 
