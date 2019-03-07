@@ -1,7 +1,7 @@
 set -euxo pipefail
 
-echo $TRAVIS_BRANCH
-echo $TRAVIS_PULL_REQUEST_SHA
+echo "$TRAVIS_BRANCH"
+echo "$TRAVIS_PULL_REQUEST_SHA"
 git diff --name-only HEAD...$TRAVIS_BRANCH
 
 mergebase="$(git merge-base -- "$TRAVIS_BRANCH" "$TRAVIS_PULL_REQUEST_SHA")"
