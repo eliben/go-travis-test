@@ -2,4 +2,4 @@ language: go
 go: "1.11.x"
 
 script:
-  - 'runtest.sh'
+  - './runtest.sh'
