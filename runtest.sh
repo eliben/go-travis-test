@@ -1,6 +1,7 @@
 set -euxo pipefail
 
 echo "$TRAVIS_BRANCH"
+echo "$TRAVIS_PULL_REQUEST"
 git diff --name-only HEAD...$TRAVIS_BRANCH
 
 if [[ -z "$TRAVIS_PULL_REQUEST_SHA" ]]; then
