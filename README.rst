@@ -8,3 +8,5 @@ Playing with Travis running go programs as part of the build
 * TRAVIS_PULL_REQUEST
 * TRAVIS_PULL_REQUEST_SHA
 
+Observation: when PR is first created, TRAVIS_PULL_REQUEST_SHA is not set. But
+it is set when another commit is pushed to the PR.
