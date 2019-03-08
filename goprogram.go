@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+	// say hello
 	fmt.Println("Hello from goprogram")
 
 	scanner := bufio.NewScanner(os.Stdin)
