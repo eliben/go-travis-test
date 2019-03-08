@@ -13,9 +13,9 @@ else
   echo $mergebase
   git diff --name-only "$mergebase" "$TRAVIS_PULL_REQUEST_SHA" --
   if git diff --name-only "$mergebase" "$TRAVIS_PULL_REQUEST_SHA" -- | go run goprogram.go; then
-    echo "goprogram returned > 1"
+    echo "goprogram success"
   else
-    echo "goprogram returned 0"
+    echo "goprogram failure"
   fi
 fi
 
