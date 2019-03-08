@@ -12,7 +12,7 @@ else
   mergebase="$(git merge-base -- "$TRAVIS_BRANCH" "$TRAVIS_PULL_REQUEST_SHA")"
   echo $mergebase
   git diff --name-only "$mergebase" "$TRAVIS_PULL_REQUEST_SHA" --
-  git diff "$mergebase" "$TRAVIS_PULL_REQUEST_SHA" --
+  git diff --name-only "$mergebase" "$TRAVIS_PULL_REQUEST_SHA" -- | go run goprogram.go
 fi
 
 echo "Running 'go run'"
